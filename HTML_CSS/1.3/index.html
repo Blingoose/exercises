@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="HTML - Tables" />
+    <title>Assignment 1.3</title>
+    <style type="text/css">
+      body {
+        background-color: powderblue;
+      }
+
+      h1 {
+        color:indigo;
+        font-family: arial;
+        padding-top: 15px;
+        padding-bottom: 10%;
+        text-transform: uppercase;
+      }
+
+      table {
+        border: 5px solid black;
+        width: 550px;
+        margin-right: auto;
+        margin-left: auto;
+        border-collapse: collapse;
+      }
+
+      td {
+        text-align: left;
+        font-family: verdana;
+        font-size: 14px;
+        column-span: all;
+        background-color: darkslateblue;
+        color: aliceblue;
+        padding-bottom: 5px;
+        padding-top: 5pxpx;
+        padding-left: 10px;
+      }
+
+      th {
+        color: darkorange;
+        text-align: left;
+        width: 0px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
+
+      thead {
+        column-span: 2px;
+        background-color: darkslateblue;
+      }
+
+      caption {
+        font-family: sans-serif;
+        text-align: left;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align: center">Creating a table</h1>
+    <table>
+      <caption>
+        STUDENTS MARK SHEET
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="4">Name</th>
+          <th>Maths</th>
+          <th>Science</th>
+          <th>English</th>
+          <th>Physics</th>
+          <th>General Knowledge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4">David</td>
+          <td>85</td>
+          <td>87</td>
+          <td>87</td>
+          <td>87</td>
+          <td>87</td>
+        </tr>
+        <tr>
+          <td colspan="4">Richard</td>
+          <td>91</td>
+          <td>81</td>
+          <td>78</td>
+          <td>71</td>
+          <td>74</td>
+        </tr>
+        <tr>
+          <td colspan="4">John</td>
+          <td>65</td>
+          <td>78</td>
+          <td>95</td>
+          <td>75</td>
+          <td>89</td>
+        </tr>
+        <tr>
+          <td colspan="4">Maria</td>
+          <td>96</td>
+          <td>81</td>
+          <td>80</td>
+          <td>81</td>
+          <td>84</td>
+        </tr>
+        <tr>
+          <td colspan="4">Scott</td>
+          <td>75</td>
+          <td>76</td>
+          <td>77</td>
+          <td>80</td>
+          <td>77</td>
+        </tr>
+        <tr>
+          <td colspan="4">Cindy</td>
+          <td>91</td>
+          <td>92</td>
+          <td>83</td>
+          <td>88</td>
+          <td>85</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
