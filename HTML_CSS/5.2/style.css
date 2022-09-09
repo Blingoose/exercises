@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+#card {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 512px;
+  box-shadow: 0 6px 8px rgb(109, 121, 133);
+  transition: 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+}
+#card:hover {
+  box-shadow: 0 8px 16px 0;
+}
+
+#card_img {
+  display: block;
+  width: 512px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#container {
+  background-color: rgb(59, 146, 212);
+  padding: 22px 0 28px 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#container h3 {
+  margin-top: 0%;
+  text-align: center;
+  line-height: 0%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+}
+#about {
+  text-align: center;
+  line-height: 1em;
+  font-size: 17px;
+  font-family: Helvetica, sans-serif;
+  color: rgb(250, 241, 246);
+  padding-bottom: 5px;
+}
+#references p,
+a {
+  text-align: center;
+  color: rgb(201, 245, 158);
+  line-height: 0%;
+  margin: 0 7px 0 7px;
+  padding-bottom: 0%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-size: 15px;
+}

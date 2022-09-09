@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+#main-card {
+  box-shadow: 0px 4px 8px 0 #564d4d;
+  transition: 0.3s;
+  max-width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #16213e;
+  padding: 20px;
+}
+
+#profile-img {
+  max-width: 225px;
+  padding: 20px;
+  display: block;
+  border-radius: 30px;
+  margin: auto;
+  transition: all 0.3s ease-in-out 0s;
+}
+#profile-img:hover {
+  box-shadow: 0 0 8px 0 #ffffff;
+  transform: rotate(360deg);
+}
+#main-card:hover {
+  box-shadow: 0 8px 16px 0 #000000;
+}
+
+#container {
+  padding: 1px 0 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  max-height: 300px;
+}
+#container h1 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  color: #ffffff;
+}
+#container h3 {
+  font-family: Rubik;
+  line-height: 1em;
+  margin: 0%;
+  padding-top: 4px;
+  text-align: center;
+  color: #dcdcdc;
+  font-size: 22px;
+}
+#column {
+  margin: 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#card {
+  margin: 10px 0 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #564d4d;
+  text-align: center;
+  background-color: #0f3460;
+  color: #c3c3c3;
+  height: fit-content;
+}
+#card:hover,
+#footer-card:hover {
+  box-shadow: 0 8px 16px 0 #000000;
+}
+.about {
+  margin: 0%;
+  line-height: 1.8em;
+  font-family: Rubik;
+  font-size: 22px;
+  padding: 50px;
+}
+#footer-card {
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #564d4d;
+  text-align: center;
+  background-color: #e94560;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+#footer-card p {
+  padding: 20px;
+  margin: 0;
+}
+#footer-card a {
+  font-family: Rubik;
+  font-size: 22px;
+  margin: 0 10px 0 10px;
+  color: #ffe4c4;
+  text-decoration: none;
+  line-height: 1em;
+}

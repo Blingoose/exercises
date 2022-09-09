@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+.clr {
+  clear: both;
+}
+.box {
+  padding: 20px;
+  margin: 0 0px 10px 0;
+  height: 400px;
+  border: solid 2px #000000;
+}
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+#box-header {
+  background: #c9c902;
+  height: 80px;
+  line-height: 40px;
+  text-align: center;
+}
+#box-main {
+  float: right;
+  width: 690px;
+  background: #a73ba7;
+  text-align: right;
+}
+#box-side {
+  float: left;
+  width: 300px;
+  background: #017301;
+}
+#box-footer {
+  background: #0000ff;
+  height: 80px;
+  line-height: 40px;
+  text-align: center;
+}
