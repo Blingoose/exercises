@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+}
+body {
+  background-color: rgb(57, 80, 110);
+  font-family: "Rubik";
+  font-size: 14px;
+}
+a {
+  margin: 40px;
+  text-decoration: none;
+}
+#buttons {
+  width: 30%;
+  margin: 10% auto;
+  text-align: center;
+}
+#flat-btns {
+  margin: 30px;
+  padding: 10px;
+}
+#round-btns {
+  margin: 30px 0;
+  padding: 10px;
+}
+#flat-ghost-btns {
+  margin: 30px 0;
+  padding: 10px;
+}
+#round-ghost-btns {
+  margin: 30px 0;
+  padding: 10px;
+}
+.btns li {
+  list-style: none;
+  display: inline;
+}
+
+/* Button Styling */
+.flat-reg {
+  background-color: rgb(94, 142, 236);
+  font-family: inherit;
+  font-size: 18px;
+  width: 100px;
+  padding: 12px 15px;
+  border-radius: 2px;
+  border: none;
+}
+.flat-reg:hover {
+  background-color: rgb(80, 122, 193);
+  transition: 70ms;
+}
+.flat-submit {
+  background-color: rgb(177, 197, 42);
+  font-family: inherit;
+  font-size: 1em;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: none;
+}
+.flat-submit:hover {
+  background-color: rgb(98, 162, 69);
+  transition: 70ms;
+}
+.round-reg-btn {
+  background-color: rgb(195, 175, 101);
+  font-family: inherit;
+  font-size: 18px;
+  width: 100px;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: none;
+}
+.round-reg-btn:hover {
+  background-color: rgb(82, 147, 103);
+  transition: 70ms;
+}
+.round-submit-btn {
+  background-color: rgb(233, 97, 114);
+  font-family: inherit;
+  padding: 4px 8px;
+  border-radius: 25px;
+  border: none;
+}
+.round-submit-btn:hover {
+  background-color: rgb(196, 80, 111);
+  transition: 70ms;
+}
+.flat-ghost-reg-btn {
+  font-family: inherit;
+  font-size: 18px;
+  width: 100px;
+  padding: 12px 15px;
+  border-radius: 2px;
+  border: 2px solid rgb(219, 88, 72);
+  background: transparent;
+}
+.flat-ghost-reg-btn:hover {
+  background-color: rgb(219, 88, 72);
+  transition: 70ms;
+}
+.flat-ghost-submit-btn {
+  font-family: inherit;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 2px solid rgb(175, 85, 151);
+  background-color: transparent;
+}
+.flat-ghost-submit-btn:hover {
+  background: rgb(175, 85, 151);
+  transition: 70ms;
+}
+.round-ghost-reg-btn {
+  font-family: inherit;
+  font-size: 18px;
+  width: 100px;
+  padding: 12px 15px;
+  border: 2px solid rgb(243, 204, 78);
+  border-radius: 30px;
+  background: transparent;
+}
+.round-ghost-reg-btn:hover {
+  background-color: rgb(243, 204, 78);
+  transition: 70ms;
+}
+.round-ghost-submit-btn {
+  font-family: inherit;
+  padding: 4px 8px;
+  border-radius: 30px;
+  border: 2px solid rgb(116, 193, 166);
+  background: transparent;
+}
+.round-ghost-submit-btn:hover {
+  background-color: rgb(116, 193, 166);
+  transition: 70ms;
+}

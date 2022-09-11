@@ -1,0 +1,18 @@
+#outer {
+    position:relative;
+  width: 100px;
+  height: 100px;
+  background: darkcyan;
+  margin: 50px;
+}
+#inner {
+  width: 50px;
+  height: 50px;
+  background: lightgreen;
+  position: absolute;
+  top: 10px;
+}
+/* ANSWER:
+Each object has it's own "static" position - which is itself = we therefore cannot use top/bottom/right/left with a static position.
+By using 'position: absolute' on the inner object, without specifying a 'position: relative' object space (I.E relative to what?), it will then use the nearest relative space which is the body of the page (the whole page). 
+So to fix this problem we had to add 'position:relative' to the outerbox (father).
