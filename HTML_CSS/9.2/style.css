@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 30px;
+}
+.box {
+  border: 2px solid #333;
+  margin: 5px;
+  padding: 15px;
+  background-color: #f2f2f2;
+}
+.box p {
+  padding-top: 10px;
+  text-align: left;
+  line-height: 1.5em;
+}
+#box-1 {
+  float: left;
+  width: 23%;
+}
+#box-2 {
+  float: left;
+  width: 23%;
+}
+#box-3 {
+  float: left;
+  width: 23%;
+}
+#box-4 {
+  float: left;
+  width: 23%;
+}
+
+@media (max-width: 400px) {
+  #box-1,
+  #box-2,
+  #box-3,
+  #box-4 {
+    transition-duration: 0.5s;
+    float: none;
+    width: 60%;
+  }
+  .box {
+    margin: 10px auto;
+  }
+}
+@media (min-width: 401px) and (max-width: 756px) {
+  #box-1,
+  #box-2,
+  #box-3,
+  #box-4 {
+    transition-duration: 0.5s;
+    float: none;
+    width: 60%;
+  }
+  .box {
+    margin: 10px auto;
+  }
+}
+@media (min-width: 757px) and (max-width: 1000px) {
+  #box-1,
+  #box-2,
+  #box-3,
+  #box-4 {
+    transition-duration: 0.5s;
+    float: none;
+    width: 50%;
+  }
+  .box {
+    margin: 10px auto;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  #box-1,
+  #box-2,
+  #box-3,
+  #box-4 {
+    transition-duration: 0.5s;
+    float: none;
+    width: 40%;
+  }
+  .box {
+    margin: 10px auto;
+  }
+}
