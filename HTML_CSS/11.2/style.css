@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100vh;
+}
+#box1 {
+  background-color: #278b27;
+}
+#box2 {
+  background-color: #5555c1;
+}
+#box3 {
+  background-color: #dc3737;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
