@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body p {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box {
+  position: relative;
+  border: #000 3px solid;
+  width: 200px;
+  height: 100px;
+  margin: 15px;
+
+  overflow: hidden;
+}
+.translate-y::after {
+  position: absolute;
+  content: attr(data-y);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-top: 65px;
+  color: red;
+  background-color: black;
+  width: 200px;
+  height: 100px;
+  transform: translate(0, -100%);
+  transition: all 0.5s ease;
+}
+.translate-y:hover::after {
+  transform: translate(0, 0);
+}
+
+.translate-x::after {
+  position: absolute;
+  content: "";
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  opacity: 0.5;
+  background-color: rgb(184, 60, 193);
+  width: 200px;
+  height: 100px;
+  transform: translate(-100%, 0);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.translate-x:hover::after {
+  transform: translate(0, 0);
+}
+
+.rotate::after {
+  position: absolute;
+  content: "";
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  opacity: 0.8;
+  background-color: rgb(255, 251, 21);
+  width: 200px;
+  height: 100px;
+  z-index: -1;
+  transform: translate(-75%, 100%) rotate(90deg);
+
+  transition: all 0.5s ease-in-out;
+}
+.rotate:hover::after {
+  transform: rotate(0);
+}
+
+.skew::after {
+  position: absolute;
+  content: "";
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  opacity: 0.8;
+  background-color: rgb(79, 21, 255);
+  width: 10px;
+  height: 0px;
+  z-index: -1;
+  transform: skew(0.3turn, 70deg);
+  transition: all 0.5s ease-in-out;
+}
+.skew:hover::after {
+  width: 200px;
+  height: 100px;
+  transform: skew(0) rotate(0);
+}
+
+.skew:hover {
+  transition-delay: 0.4s;
+  transform: skew(-10deg);
+}
+
+.scale::after {
+  position: absolute;
+  content: attr(data-scale);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-top: 65px;
+  width: 4000px;
+  color: #0000;
+  height: 100px;
+  transform: scale(50) translate(0, 0);
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+.scale:hover::after {
+  visibility: visible;
+  background-color: #000;
+  color: aliceblue;
+  transform: scale(1);
+  width: 200px;
+  height: 100px;
+}
