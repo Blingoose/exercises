@@ -37,6 +37,7 @@ body {
   left: 20%;
   border: 20px solid;
   border-color: coral #0000 #0000 #0000;
+  z-index: -1;
 }
 #tooltip:hover #tooltip-text {
   top: -200%;
