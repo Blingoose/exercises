@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 98vh;
+}
+#grid {
+  display: grid;
+  margin: 10px;
+  height: 100%;
+  grid-template-areas:
+    "header header header header header header"
+    "sidebar-left content content content content sidebar-right"
+    "footer footer footer footer footer footer";
+  gap: 1vh;
+}
+#box {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.header {
+  grid-area: header;
+  background: #f2545b;
+}
+.sidebar-left {
+  grid-area: sidebar-left;
+  grid-row: 2 / span 5;
+  background: #6184d8;
+}
+.content {
+  grid-area: content;
+  grid-row: 2 / span 5;
+  background: #50c5b7;
+}
+.sidebar-right {
+  grid-area: sidebar-right;
+  background: #533a71;
+  grid-row: 2 / span 5;
+}
+.footer {
+  grid-area: footer;
+  background: #c3afdb;
+  grid-row: 7;
+}
+
+@media (max-width: 768px) {
+  #grid {
+    display: grid;
+    margin: 10px;
+    height: 100%;
+    grid-template-areas:
+      "header header header header header header header"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-left sidebar-left content content content content content"
+      "sidebar-right sidebar-right sidebar-right sidebar-right sidebar-right sidebar-right sidebar-right"
+      "footer footer footer footer footer footer footer";
+    gap: 1vh;
+  }
+  .header {
+    grid-area: header;
+  }
+  .sidebar-left {
+    grid-area: sidebar-left;
+  }
+  .content {
+    grid-area: content;
+  }
+  .sidebar-right {
+    grid-area: sidebar-right;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+@media (max-width: 500px) {
+  #grid {
+    transition: all 1s ease;
+    display: grid;
+    margin: 10px;
+    height: 100%;
+    grid-template-areas:
+      "header"
+      "sidebar-left"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "sidebar-right"
+      "footer";
+    gap: 1vh;
+  }
+  .header {
+    grid-area: header;
+  }
+  .sidebar-left {
+    grid-area: sidebar-left;
+  }
+  .content {
+    grid-area: content;
+  }
+  .sidebar-right {
+    grid-area: sidebar-right;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}

@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 98vh;
+}
+#grid {
+  display: grid;
+  margin: 10px;
+  height: 100%;
+  grid-template-areas:
+    "item1 item1 item2 item2 item2 item3 item4 item4"
+    "item1 item1 item2 item2 item2 item3 item4 item4"
+    "item5 item5 item2 item2 item2 item6 item6 item7"
+    "item5 item5 item8 item8 item9 item6 item6 item7"
+    "item5 item5 item8 item8 item10 item10 item10 item7"
+    "item11 item12 item12 item13 item10 item10 item10 item14"
+    "item11 item12 item12 item13 item10 item10 item10 item14";
+  gap: 1vh;
+}
+#box {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+.item1 {
+  grid-area: item1;
+  background: url(img/1.jpeg) center center/cover;
+}
+.item2 {
+  grid-area: item2;
+  background: url(img/2.jpeg) center center/cover;
+}
+.item3 {
+  grid-area: item3;
+  background: url(img/3.jpeg) center center/cover;
+}
+.item4 {
+  grid-area: item4;
+  background: url(img/4.jpeg) center center/cover;
+}
+.item5 {
+  grid-area: item5;
+  background: url(img/5.jpeg) center center/cover;
+}
+.item6 {
+  grid-area: item6;
+  background: url(img/6.jpeg) center center/cover;
+}
+.item7 {
+  grid-area: item7;
+  background: url(img/7.jpeg) center center/cover;
+}
+.item8 {
+  grid-area: item8;
+  background: url(img/8.jpeg) center center/cover;
+}
+.item9 {
+  grid-area: item9;
+  background: url(img/9.jpeg) center center/cover;
+}
+.item10 {
+  grid-area: item10;
+  background: url(img/10.jpeg) center center/cover;
+}
+.item11 {
+  grid-area: item11;
+  background: url(img/11.jpeg) center center/cover;
+}
+.item12 {
+  grid-area: item12;
+  background: url(img/12.jpeg) center center/cover;
+}
+.item13 {
+  grid-area: item13;
+  background: url(img/13.jpeg) center center/cover;
+}
+.item14 {
+  grid-area: item14;
+  background: url(img/14.jpeg) center center/cover;
+}
+
+@media (max-width: 900px) {
+  #grid {
+    display: grid;
+    margin: 10px;
+    height: 100%;
+    grid-template-areas:
+      "item1 item5 item5 item3 item3 item3 item4 item4"
+      "item1 item13 item2 item11 item11 item11 item4 item4"
+      "item1 item13 item2 item11 item11 item11 item7 item7"
+      "item9 item8 item8 item6 item6 item6 item7 item7"
+      "item9 item8 item8 item10 item10 item10 item14 item14"
+      "item12 item12 item12 item10 item10 item10 item14 item14";
+
+    gap: 1vh;
+  }
+  .item1 {
+    grid-area: item1;
+    background: url(img/6.jpeg) center center/cover;
+  }
+  .item2 {
+    grid-area: item2;
+    background: url(img/14.jpeg) center center/cover;
+  }
+  .item3 {
+    grid-area: item3;
+    background: url(img/6.jpeg) center center/cover;
+  }
+  .item4 {
+    grid-area: item4;
+    background: url(img/11.jpeg) center center/cover;
+  }
+  .item5 {
+    grid-area: item5;
+    background: url(img/10.jpeg) center center/cover;
+  }
+  .item6 {
+    grid-area: item6;
+    background: url(img/7.jpeg) center center/cover;
+  }
+  .item7 {
+    grid-area: item7;
+    background: url(img/1.jpeg) center center/cover;
+  }
+  .item8 {
+    grid-area: item8;
+    background: url(img/12.jpeg) center center/cover;
+  }
+  .item9 {
+    grid-area: item9;
+    background: url(img/8.jpeg) center center/cover;
+  }
+  .item10 {
+    grid-area: item10;
+    background: url(img/4.jpeg) center center/cover;
+  }
+  .item11 {
+    grid-area: item11;
+    background: url(img/9.jpeg) center center/cover;
+  }
+  .item12 {
+    grid-area: item12;
+    background: url(img/3.jpeg) center center/cover;
+  }
+  .item13 {
+    grid-area: item13;
+    background: url(img/2.jpeg) center center/cover;
+  }
+  .item14 {
+    grid-area: item14;
+    background: url(img/13.jpeg) center center/cover;
+  }
+}
+@media (max-width: 500px) {
+  #grid {
+    grid-template-areas:
+      "item1 item1 item13 item5 item9 item9"
+      "item1 item1 item13 item5 item9 item9"
+      "item2 item8 item8 item5 item10 item10"
+      "item2 item8 item8 item6 item11 item11"
+      "item2 item8 item8 item6 item11 item11"
+      "item3 item3 item7 item12 item11 item11"
+      "item3 item3 item7 item12 item14 item14"
+      "item4 item4 item4 item12 item14 item14";
+
+    gap: 1vh;
+  }
+  .item1 {
+    grid-area: item1;
+    background: url(img/11.jpeg) center center/cover;
+  }
+  .item2 {
+    grid-area: item2;
+    background: url(img/5.jpeg) center center/cover;
+  }
+  .item3 {
+    grid-area: item3;
+    background: url(img/7.jpeg) center center/cover;
+  }
+  .item4 {
+    grid-area: item4;
+    background: url(img/12.jpeg) center center/cover;
+  }
+  .item5 {
+    grid-area: item5;
+    background: url(img/1.jpeg) center center/cover;
+  }
+  .item6 {
+    grid-area: item6;
+    background: url(img/14.jpeg) center center/cover;
+  }
+  .item7 {
+    grid-area: item7;
+    background: url(img/4.jpeg) center center/cover;
+  }
+  .item8 {
+    grid-area: item8;
+    background: url(img/3.jpeg) center center/cover;
+  }
+  .item9 {
+    grid-area: item9;
+    background: url(img/10.jpeg) center center/cover;
+  }
+  .item10 {
+    grid-area: item10;
+    background: url(img/13.jpeg) center center/cover;
+  }
+  .item11 {
+    grid-area: item11;
+    background: url(img/9.jpeg) center center/cover;
+  }
+  .item12 {
+    grid-area: item12;
+    background: url(img/8.jpeg) center center/cover;
+  }
+  .item13 {
+    grid-area: item13;
+    background: url(img/2.jpeg) center center/cover;
+  }
+  .item14 {
+    grid-area: item14;
+    background: url(img/6.jpeg) center center/cover;
+  }
+}
