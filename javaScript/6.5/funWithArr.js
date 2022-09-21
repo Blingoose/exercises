@@ -9,3 +9,4 @@ console.log(filledNumArr);
 
 const arrFromValues = filledArr.map((item) => item.name);
 console.log(arrFromValues);
+
