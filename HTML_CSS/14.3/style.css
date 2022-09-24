@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-contanier {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  /* margin: 0 20px; */
+  padding: 0 20px;
+}
+
+/** this is the initial state - no border */
+/** position must be relative for ::before and ::after */
+nav li a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/** ::before will add border for the TOP with 0 opacity */
+/** initial state at 0 width (I.E - not existed, but placed on top-left*/
+/** position must be absolute! and don't forget the --> content: ""   */
+nav li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  border-top: 1.5px solid black;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+/** ::after will add border for the BOTTOM with 0 opacity */
+/** initial state at 0 width (I.E - not existed, but placed on bottom-right*/
+/** position must be absolute! and don't forget the --> content: ""   */
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 0;
+  opacity: 0;
+  border-bottom: 1.5px solid black;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+/** it's show-time!  */
+/** since both hovers do essentialy the same thing, we'll add them together */
+/** opacity will transition from 0 to 1, and width from 0 to 100%, each from it's own side. */
+nav li a:hover::before,
+nav li a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
