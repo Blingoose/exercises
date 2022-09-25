@@ -12,11 +12,14 @@ const myCountry = {
     );
   },
   checkIsIsland() {
-    this.neighbours.length > 0
-      ? (myCountry.isIsland = false)
-      : (myCountry.isIsland = true);
+    let isIsland =
+      this.neighbours.length > 0
+        ? (myCountry.isIsland = false)
+        : (myCountry.isIsland = true);
+    return isIsland;
   },
 };
 
-myCountry.checkIsIsland();
-myCountry;
+console.log(myCountry.checkIsIsland());
+myCountry.describe();
+console.log(myCountry);
