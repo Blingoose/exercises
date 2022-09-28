@@ -100,7 +100,7 @@ body {
   }
   .item1 {
     grid-area: item1;
-    background: url(img/6.jpeg) center center/cover;
+    background: url(img/5.jpeg) center center/cover;
   }
   .item2 {
     grid-area: item2;
