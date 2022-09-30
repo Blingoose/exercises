@@ -42,16 +42,16 @@ const data = [
 ];
 
 //* 1)-----------------------------------
-// const returnNames = (arr, i) => {
-//   let names = arr.map((element) => {
-//     return { Name: element.name };
-//   });
-//   return names;
-// };
-// console.log(returnNames(data));
+const returnNames = (arr, i) => {
+  let names = arr.map((element) => {
+    return { Name: element.name };
+  });
+  return names;
+};
+console.log(returnNames(data));
 
-// const getNames = (data) => data.map(({ name }) => name);
-// console.log(getNames(data));
+const getNames = (data) => data.map(({ name }) => name);
+console.log(getNames(data));
 // ------------------------------------------------------------------
 
 //* 2)--------------------------------------------
