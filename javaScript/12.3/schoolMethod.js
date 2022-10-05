@@ -66,6 +66,20 @@ const school = {
       });
     }
   },
+  assignTeachersSubject(teacherID, subject) {
+    const findTeacher = school.teachers.find((t) => {
+      return t.id === teacherID;
+    });
+    if (
+      findTeacher.subjects
+        .toString()
+        .toLowerCase()
+        .includes(subject.toLowerCase())
+    ) {
+      return console.log(`Mr. ${findTeacher.name} already has that subject.`);
+    }
+    return findTeacher.subjects.push(subject.toLowerCase());
+  },
 };
 
 // school.findPerson("teachers", 2);
@@ -76,4 +90,9 @@ const school = {
 // school.assignStudent(11, "biology");
 // school.assignStudent(11, "ethics");
 // school.assignStudent(7, "ethics");
+school.assignTeachersSubject(1, "CreePyology");
+school.assignTeachersSubject(2, "Ethics");
+school.assignTeachersSubject(1, "biology");
 console.log(school.teachers);
+
+// The answer for question 4 is combined into question 3.

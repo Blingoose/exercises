@@ -74,10 +74,9 @@ console.log(getNames(data));
 // };
 // console.log(before1990(data));
 
-//*successful - but - didn't do it myself
 const bornBeforeNineties = (arr) => {
   const bornBefore1990 = [];
-  arr.map((d) => {
+  arr.forEach((d) => {
     if (d.birthday.split("-")[2] < 1990) {
       bornBefore1990.push(d);
     }
@@ -86,6 +85,7 @@ const bornBeforeNineties = (arr) => {
 };
 
 console.log(bornBeforeNineties(data));
+
 // ------------------------------------------------------------------
 
 //* 3)-------------------------------------------------------
@@ -113,8 +113,8 @@ console.log(bornBeforeNineties(data));
 //?------ for each is more appropriate here because I only iterate over.
 
 const objFood = {};
-const foodsCount = (foods) => {
-  foods.forEach((element) => {
+const foodsCount = (data) => {
+  data.forEach((element) => {
     let allFoods = [
       ...element.favoriteFoods.meats,
       ...element.favoriteFoods.fish,
