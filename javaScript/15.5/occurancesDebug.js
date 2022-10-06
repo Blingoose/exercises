@@ -18,6 +18,7 @@
 //* 3) While debugging it showed that the counter is 0 at each iteration through the loop. That is because
 //*   anything we add to the counter is discarded immediately as it isn't saved anywehre. It should have had the += sign or ++.
 // 4. Fix the code and submit it all.
+const log = console.log.bind(console);
 
 function countOccurrences(str, char) {
   let counter = 0;
@@ -30,4 +31,4 @@ function countOccurrences(str, char) {
   return counter;
 }
 const result = countOccurrences("ini mini miny moe", "n");
-console.log(result);
+log(result);

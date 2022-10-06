@@ -66,6 +66,7 @@ const school = {
       });
     }
   },
+
   assignTeachersSubject(teacherID, subject) {
     const findTeacher = school.teachers.find((t) => {
       return t.id === teacherID;
@@ -83,16 +84,16 @@ const school = {
 };
 
 // school.findPerson("teachers", 2);
-// school.assignStudent(11, "biology");
-// school.assignStudent(10, "biology");
-// school.assignStudent(12, "biology");
-// school.assignStudent(13, "history");
-// school.assignStudent(11, "biology");
+school.assignStudent(11, "biology");
+school.assignStudent(10, "biology");
+school.assignStudent(12, "biology");
+school.assignStudent(11, "history");
+school.assignStudent(11, "biology");
 // school.assignStudent(11, "ethics");
 // school.assignStudent(7, "ethics");
-school.assignTeachersSubject(1, "CreePyology");
-school.assignTeachersSubject(2, "Ethics");
-school.assignTeachersSubject(1, "biology");
+// school.assignTeachersSubject(1, "CreePyology");
+// school.assignTeachersSubject(2, "Ethics");
+// school.assignTeachersSubject(1, "biology");
 console.log(school.teachers);
 
 // The answer for question 4 is combined into question 3.
