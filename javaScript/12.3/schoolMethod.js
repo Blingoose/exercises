@@ -52,7 +52,7 @@ const school = {
       )
     ) {
       console.log(
-        `Student with an id of ${studentID} has already been assigned to a class.`
+        `Student with an id of ${studentID} has already been assigned to that teacher.`
       );
     } else {
       school.teachers.filter((a) => {
@@ -95,5 +95,3 @@ school.assignStudent(11, "biology");
 // school.assignTeachersSubject(2, "Ethics");
 // school.assignTeachersSubject(1, "biology");
 console.log(school.teachers);
-
-// The answer for question 4 is combined into question 3.

@@ -2,15 +2,15 @@ const school = {
   teachers: [
     {
       id: 1,
-      name: 'Pinchas',
-      subjects: ['chemistry', 'biology', 'physics'],
+      name: "Pinchas",
+      subjects: ["chemistry", "biology", "physics"],
       students: [],
       capacityLeft: 3,
     },
     {
       id: 2,
-      name: 'Williams',
-      subjects: ['history', 'ethics'],
+      name: "Williams",
+      subjects: ["history", "ethics"],
       students: [],
       capacityLeft: 2,
     },
@@ -18,22 +18,22 @@ const school = {
   students: [
     {
       id: 10,
-      name: 'Jennifer',
+      name: "Jennifer",
       age: 20,
     },
     {
       id: 11,
-      name: 'Howard',
+      name: "Howard",
       age: 23,
     },
     {
       id: 12,
-      name: 'Old-Timmy',
+      name: "Old-Timmy",
       age: 86,
     },
     {
       id: 13,
-      name: 'Houston',
+      name: "Houston",
       age: 21,
     },
   ],
@@ -41,8 +41,8 @@ const school = {
 
 //? 1
 school.findPerson = function (type, id) {
-  const students = this[type];
-  const person = students.find((e, i) => {
+  const findPerson = this[type];
+  const person = findPerson.find((e) => {
     return e.id === id;
   });
   return person;
@@ -51,16 +51,16 @@ school.findPerson = function (type, id) {
 
 //? 2
 school.assignStudent = function (id, subject) {
-  const student = school.findPerson('students', id);
+  const student = school.findPerson("students", id);
   if (!student) {
-    return 'No student with the specified id was found';
+    return "No student with the specified id was found";
   }
   const teacher = school.teachers.find((e) => {
     return e.subjects.includes(subject);
   });
 
   if (teacher.capacityLeft < 1) {
-    return 'Sorry, no available teachers left';
+    return "Sorry, no available teachers left";
   } else {
     teacher.students.push(student);
     teacher.capacityLeft--;
@@ -79,4 +79,4 @@ school.assignTeachersSubject = function (id, subject) {
   }
 };
 
-console.log(school.assignTeachersSubject(2, 'Math'));
+console.log(school.assignTeachersSubject(2, "Math"));
