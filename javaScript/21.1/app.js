@@ -21,7 +21,6 @@ function clearMessage() {
 function clearRepeated() {
   if (count === 1) {
     timeOut(clearMessage, 3000);
-    console.log("no");
   }
 }
 
