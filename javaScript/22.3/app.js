@@ -61,7 +61,7 @@ function restart() {
 }
 
 function onlyLetters(str) {
-  return /^[a-zA-Z]+$/.test(str);
+  return /^[a-z]/.test(str);
 }
 
 gameStart();
