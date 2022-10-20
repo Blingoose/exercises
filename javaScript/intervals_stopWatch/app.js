@@ -1,18 +1,21 @@
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const millisec = document.querySelector(".milli");
-const start = document.querySelector(".start");
-const stop = document.querySelector(".stop");
-
+const startMe = document.querySelector(".start");
+const stopMe = document.querySelector(".stop");
+let hasButtonBeenClicked;
 let milliseconds = 0;
 let interval = null;
+let mill = 0;
+let sec = 0;
+let min = 0;
 
 function main() {
   milliseconds += 10;
 
-  let min = Math.floor((milliseconds / (1000 * 60)) % 60);
-  let sec = Math.floor((milliseconds / 1000) % 60);
-  let mill = Math.floor((milliseconds % 1000) / 10);
+  min = Math.floor((milliseconds / (1000 * 60)) % 60);
+  sec = Math.floor((milliseconds / 1000) % 60);
+  mill = Math.floor((milliseconds % 1000) / 10);
 
   minutes.innerText = min;
   seconds.innerText = sec;
@@ -29,13 +32,27 @@ function main() {
   }
 }
 
-start.addEventListener("click", startWatch);
-stop.addEventListener("click", stopWatch);
+startMe.addEventListener("click", startWatch);
+
+stopMe.addEventListener("click", function eventHandler() {
+  stopWatch();
+  hasButtonBeenClicked = !hasButtonBeenClicked;
+  if (!hasButtonBeenClicked) resetWatch();
+});
 
 function startWatch() {
+  clearInterval(interval);
   interval = setInterval(main, 10);
+  hasButtonBeenClicked = false;
 }
 
 function stopWatch() {
   clearInterval(interval);
+}
+
+function resetWatch() {
+  milliseconds = 0;
+  seconds.innerText = "00";
+  millisec.innerText = "00";
+  minutes.innerText = "00";
 }
