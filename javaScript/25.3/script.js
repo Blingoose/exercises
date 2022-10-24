@@ -16,3 +16,5 @@ function printHeroes(heroes, printFunc) {
 }
 
 printHeroes(superHeroes, printName);
+
+// printName.call(batman)
