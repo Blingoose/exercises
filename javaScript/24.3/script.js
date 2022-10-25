@@ -4,16 +4,16 @@ Array.prototype.myFilter = function (callback) {
   const newArr = [];
   for (let i = 0; i < this.length; i++) {
     let currentElement = this[i];
-    let callbackParams = callback(currentElement, i, this);
-    if (callbackParams) {
+    let testCondition = callback(currentElement, i, this);
+    if (testCondition === true) {
       newArr.push(currentElement);
     }
   }
   return newArr;
 };
 
-const test = testingArray.myFilter(function (item, index, arr) {
+const calc = testingArray.myFilter(function (item, index, arr) {
   return item % 2 === 1;
 });
 
-console.log(test);
+console.log(`${calc}`);
