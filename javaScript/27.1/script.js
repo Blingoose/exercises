@@ -8,9 +8,5 @@ function greaterThanTen(num) {
 }
 
 greaterThanTen(rand)
-  .then(function () {
-    console.log("Greater than!");
-  })
-  .catch(function () {
-    console.log("Less than :(");
-  });
+  .then(() => console.log("Greater than!"))
+  .catch(() => console.log("Less than :("));
