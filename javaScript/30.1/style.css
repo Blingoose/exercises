@@ -1,1 +1,49 @@
-const 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.body {
+  height: 100vh;
+  width: 100vw;
+}
+.search-container {
+  height: 30vh;
+  width: 100vw;
+}
+.inner {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 70vh;
+  width: 100vw;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 350px;
+  background-color: gray;
+  margin: 10px 20px;
+}
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.user-name {
+  height: 30px;
+}
+.info {
+  height: 30px;
+  width: 100px;
+}
