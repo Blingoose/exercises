@@ -10,13 +10,13 @@ const checkStatusAndParse = (response) => {
 };
 
 const getJoke = (data) => {
-  const jokeOfTheDay = data.contents.jokes[0];
-  return Promise.resolve(jokeOfTheDay);
+  const jokeOfTheDay = data.contents.jokes[0].joke;
+  return jokeOfTheDay;
 };
 
 const printJokeAndTitle = (data) => {
-  const joke = data.joke.text;
-  const title = data.joke.title;
+  const joke = data.text;
+  const title = data.title;
   jokeTitle.innerText = title;
   jokeOTD.innerText = joke;
 };
