@@ -10,12 +10,13 @@ function fetchJoke() {
       if (!response.ok)
         throw new Error(`Status Code Error: ${response.status}`);
 
-      response.json().then((data) => {
-        const title = data.contents.jokes[0].joke.title;
-        const joke = data.contents.jokes[0].joke.text;
-        jokeTitle.innerText = title;
-        jokeOTD.innerText = joke;
-      });
+      return response.json();
+    })
+    .then((data) => {
+      const title = data.contents.jokes[0].joke.title;
+      const joke = data.contents.jokes[0].joke.text;
+      jokeTitle.innerText = title;
+      jokeOTD.innerText = joke;
     })
     .catch((err) => {
       console.log(`${err}`);

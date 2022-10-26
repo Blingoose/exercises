@@ -4,10 +4,9 @@ const str = "What's up baby?";
 
 function makeAllCaps(arr) {
   return new Promise((resolve, reject) => {
-    let upperCased = [];
-    arr.forEach((e, i, arr) => {
+    const upperCased = arr.map((e, i, arr) => {
       if (typeof e === "string" && Array.isArray(arr)) {
-        upperCased[i] = e.toUpperCase();
+        return e.toUpperCase();
       } else {
         reject({ status: 404, action: "rejected" });
       }
