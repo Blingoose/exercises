@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #eaeaea;
   font-family: var(--main-font);
@@ -12,6 +13,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
 .search-container {
   background-color: #3c4048;
   height: 15vh;
