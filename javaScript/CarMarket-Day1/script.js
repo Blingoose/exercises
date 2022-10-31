@@ -798,14 +798,14 @@ const setNewCarToAgency = (agencyObject, carObject) => {
   if (agencyObject.cars[brand] === undefined) {
     agencyObject.cars[brand] = carObject[brand];
   } else {
-    agencyObject.cars[brand].push(carObject[brand]);
+    agencyObject.cars[brand].push(...carObject[brand]);
     console.log(brand);
   }
   return carObject;
 };
 const agency = ourCarMarket.sellers[0];
 const addTeslaModel3 = {
-  Tesla: [
+  Bmw: [
     {
       name: "Model 3",
       year: 2022,
