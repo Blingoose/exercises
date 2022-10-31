@@ -772,14 +772,39 @@ const getAllCustomerCarsById = (customersArr, customerId) => {
 //? @param {object}  - agencyObject
 //? @param {object}  - carObject (with 'brand' key value pair)
 //? @return {object} - carObject - the car after it has been assigned
+//! Solution 1
+// const setNewCarToAgency = (agencyObject, carObject) => {
+//   ourCarMarket.sellers.find((name) => {
+//     if (name.agencyName === agencyObject) {
+//       Object.assign(name.cars, carObject);
+//     }
+//   });
+// };
+// setNewCarToAgency("Best Deal", {
+//   Tesla: [
+//     {
+//       name: "Model 3",
+//       year: 2022,
+//       price: 350000,
+//       ownerId: "Plyq5M5AZ",
+//       carNumber: "El-Mu",
+//     },
+//   ],
+// });
+
+//! Solution 2
 const setNewCarToAgency = (agencyObject, carObject) => {
-  ourCarMarket.sellers.find((name) => {
-    if (name.agencyName === agencyObject) {
-      Object.assign(name.cars, carObject);
-    }
-  });
+  const brand = Object.keys(carObject);
+  if (agencyObject.cars[brand] === undefined) {
+    agencyObject.cars[brand] = carObject[brand];
+  } else {
+    agencyObject.cars[brand].push(carObject[brand]);
+    console.log(brand);
+  }
+  return carObject;
 };
-setNewCarToAgency("Best Deal", {
+const agency = ourCarMarket.sellers[0];
+const addTeslaModel3 = {
   Tesla: [
     {
       name: "Model 3",
@@ -789,7 +814,8 @@ setNewCarToAgency("Best Deal", {
       carNumber: "El-Mu",
     },
   ],
-});
+};
+setNewCarToAgency(agency, addTeslaModel3);
 
 console.log(ourCarMarket.sellers);
 //TODO ------------------------------------------------------------------------------------ I'm Here --------
