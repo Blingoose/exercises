@@ -799,7 +799,7 @@ const setNewCarToAgency = (agencyObject, carObject) => {
     agencyObject.cars[brand] = carObject[brand];
   } else {
     agencyObject.cars[brand].push(...carObject[brand]);
-    console.log(brand);
+    // console.log(brand);
   }
   return carObject;
 };
@@ -815,29 +815,72 @@ const addTeslaModel3 = {
     },
   ],
 };
-setNewCarToAgency(agency, addTeslaModel3);
+// setNewCarToAgency(agency, addTeslaModel3);
 
-console.log(ourCarMarket.sellers);
+// console.log(ourCarMarket.sellers);
 //TODO ------------------------------------------------------------------------------------ I'm Here --------
 //* 14. deleteCarFromAgency
 //? @param {object}  - agencyObject
 //? @param {string}  - carNumber
 //? @return {object} - carObject - the car after it has been removed
-const deleteCarFromAgency = (agencyObject, carNumber) => {};
+// const deleteCarFromAgency = (agencyObject, carNumber) => {
+//   let deletedCar;
+//   for (let brand in agencyObject.cars) {
+//     agencyObject.cars[brand] = agencyObject.cars[brand].filter((car) => {
+//       if (car.carNumber === carNumber) {
+//         deletedCar = car;
+//       }
+//       return car.carNumber !== carNumber;
+//     });
+//   }
+//   return deletedCar;
+// };
+
+const deleteCarFromAgency = (agencyObject, carNumber) => {
+  let deletedCar;
+  for (let brand of Object.values(agencyObject.cars)) {
+    // console.log(agencyObject);
+    brand.filter((car) => {
+      if (car.carNumber === carNumber) {
+        deletedCar = car;
+        brand.splice(brand.indexOf(deletedCar), 1);
+      }
+    });
+  }
+  return deletedCar;
+};
+const carMax = ourCarMarket.sellers[0];
+const deleted = deleteCarFromAgency(carMax, "4Ixb0");
+// console.log(deleted);
+// console.log(carMax);
 
 //* 15. decrementOrIncrementCashOfAgency
 //? Decrement or increment cash of an agency
 //? @param {object}   - agencyObj
 //? @param {number}   - amount - negative or positive amount
 // ? @return {number} - the new amount of agency cash
-const decOrIncCashOfAgency = (agencyObj, amount) => {};
+const decOrIncCashOfAgency = (agencyObj, amount) => {
+  return (agencyObj.cash += amount);
+};
+
+const agBestDeal = ourCarMarket.sellers[2];
+// console.log(ourCarMarket.sellers[2]);
+// console.log(decOrIncCashOfAgency(agBestDeal, -1000000));
+// console.log(ourCarMarket.sellers[2]);
 
 //* 16. decOrIncCreditOfAgency
 //? @param {object}  - agencyObj
 //? @param {number}  - amount - negative or positive amount
 //? @return {number} - the new amount of agency credit
 //?                    The lowest credit is 0
-const decOrIncCreditOfAgency = (agencyObj, amount) => {};
+const decOrIncCreditOfAgency = (agencyObj, amount) => {
+  if (agencyObj.credit + amount >= 0) {
+    return (agencyObj.credit += amount);
+  } else return "Credit cannot be negative";
+};
+// console.log(ourCarMarket.sellers[0]);
+console.log(decOrIncCreditOfAgency(ourCarMarket.sellers[0], 150000));
+// console.log(ourCarMarket.sellers[0]);
 
 //* 17. setCarToCustomer
 //? @param {object} - customerObj
