@@ -818,7 +818,6 @@ const addTeslaModel3 = {
 // setNewCarToAgency(agency, addTeslaModel3);
 
 // console.log(ourCarMarket.sellers);
-//TODO ------------------------------------------------------------------------------------ I'm Here --------
 //* 14. deleteCarFromAgency
 //? @param {object}  - agencyObject
 //? @param {string}  - carNumber
@@ -882,6 +881,7 @@ const decOrIncCreditOfAgency = (agencyObj, amount) => {
 console.log(decOrIncCreditOfAgency(ourCarMarket.sellers[0], 150000));
 // console.log(ourCarMarket.sellers[0]);
 
+//TODO --------------------------------------------------------------------------- I'm Here --------
 //* 17. setCarToCustomer
 //? @param {object} - customerObj
 //? @param {object} - carObject
