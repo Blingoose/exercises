@@ -1,0 +1,7 @@
+.card-top {
+  height: 50%;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 5px 15px 0.5px rgba(0, 0, 0, 1);
+}
