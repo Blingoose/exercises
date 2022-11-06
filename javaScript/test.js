@@ -8,9 +8,9 @@
 // // [ 5 ]
 // console.log(arrayLike);
 
-const array1 = ["a", "b", "c"];
+// const array1 = ["a", "b", "c"];
 
-console.log(array1.entries());
+// console.log(array1.entries());
 
 // If you need to find:
 
