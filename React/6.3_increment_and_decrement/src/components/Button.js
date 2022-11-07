@@ -1,10 +1,10 @@
 import React from "react";
 
-function Button(props) {
+function Button({ clickHandler, children }) {
   return (
     <div>
-      <button onClick={props.clickHandler} type="button" value={props.value}>
-        {props.children}
+      <button onClick={clickHandler} type="button">
+        {children}
       </button>
     </div>
   );
