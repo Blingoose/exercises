@@ -3,11 +3,12 @@ import "./Card.css";
 import CardTop from "./CardTop";
 import CardBottom from "./CardBottom";
 
-function Card(props) {
+function Card({ card }) {
+  const [img] = card;
   return (
     <div className="card">
-      <CardTop card={props.card.img}></CardTop>
-      <CardBottom card={props.card}></CardBottom>
+      <CardTop image={img}></CardTop>
+      <CardBottom card={card}></CardBottom>
     </div>
   );
 }
