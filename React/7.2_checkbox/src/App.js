@@ -1,7 +1,15 @@
-import "./App.css";
+import Checkbox from "./Checkbox";
 
 function App() {
-  return <div className="App"></div>;
+  const arr = Array.from(Array(4), (_, index) => index + 1);
+
+  return (
+    <div>
+      {arr.map((input) => (
+        <Checkbox checked={input > arr.length / 2} />
+      ))}
+    </div>
+  );
 }
 
 export default App;
