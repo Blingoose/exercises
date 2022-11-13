@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.box1 {
+  animation: slide1 1s ease-in-out forwards;
+  background-color: #00000000;
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
