@@ -1,7 +1,11 @@
-import "./App.css";
-
+import {React, useEffect} from 'react'
+import Box from './Components/Box.jsx'
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Box></Box>
+    </div>
+  )
 }
 
-export default App;
+export default App
