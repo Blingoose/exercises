@@ -1,0 +1,18 @@
+.card-container {
+  font-size: 12px;
+  max-height: 30vh;
+  padding: 5px;
+  flex: 0 0 200px;
+  background-color: #f0ebce;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
+
+.img {
+  border-radius: 5px;
+}

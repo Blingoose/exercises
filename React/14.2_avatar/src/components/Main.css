@@ -1,0 +1,15 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  background-color: #4e6c50;
+}
+
+.input {
+  background-color: #395144;
+  padding: 10px;
+}
