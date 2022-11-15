@@ -1,0 +1,12 @@
+.nav-container {
+  height: 10vh;
+  width: 100vw;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  margin: 20px;
+}

@@ -5,9 +5,9 @@ function Map({ personsArr, inputValue }) {
   const insertPerson = () => {
     let filtered = personsArr;
     if (inputValue) {
-      filtered = personsArr.filter((person) =>
-        person.name.toLowerCase().includes(inputValue.toLowerCase())
-      );
+      filtered = personsArr.filter((person) => {
+        return person.name.toLowerCase().includes(inputValue.toLowerCase());
+      });
     }
     return filtered.map((person, i) => <Avatar key={i} personData={person} />);
   };

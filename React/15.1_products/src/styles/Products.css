@@ -1,0 +1,7 @@
+.products {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  margin-top: 5vh;
+  justify-content: space-evenly;
+}
