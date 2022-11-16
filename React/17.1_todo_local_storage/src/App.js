@@ -7,12 +7,14 @@ import "./style/TodoDiv.css";
 import "./App.css";
 
 function App() {
-  const [todos, setTodos] = useState([].reverse());
   const [inputValue, setInputValue] = useState("");
+  const [todos, setTodos] = useState(
+    localStorage.todos ? JSON.parse(localStorage.todos) : []
+  );
 
   useEffect(() => {
     const dataToLS = JSON.stringify(todos);
-    localStorage.setItem("taskArr", dataToLS);
+    localStorage.setItem("todos", dataToLS);
   }, [todos]);
 
   const handleInput = (event) => {
@@ -21,41 +23,43 @@ function App() {
 
   const addToDo = () => {
     if (inputValue !== "") {
-      setTodos((prev) => [...prev, { val: inputValue, done: false }]);
+      setTodos((prev) => [...prev, { val: inputValue, done: false }].reverse());
       setInputValue("");
     }
   };
 
   const handleDelete = (index) => {
     setTodos((prev) =>
-      prev.filter((todo, i) => {
+      prev.filter((_, i) => {
         return i !== index;
       })
     );
   };
 
   const handleUpdate = (index) => {
-    // console.log(event.target.checked);
     setTodos((prev) => {
       return prev.map((todo, i) => {
         return i !== index ? todo : { ...todo, done: !todo.done };
       });
     });
   };
-
+  console.log(todos);
   return (
     <div className="todo-container">
       <div className="todo-box">
         <Input ctrlValue={inputValue} handleChange={handleInput} />
         <AddButton addTodo={addToDo} />
-        <h3 style={{ textAlign: "center" }}>Add To Do:</h3>
+        <h2 style={{ textAlign: "center" }}>Add To Do:</h2>
         {todos.map((todo, index) => (
           <div
             className={`todo-item ${todo.done ? "done" : "not"}`}
             key={todo.val + index}
             onClick={() => handleUpdate(index)}
           >
-            <TodoItem task={todo.val} />
+            <div>
+              {console.log(todo.done)}
+              <TodoItem task={todo.val} />
+            </div>
             <div>
               <DeleteButton
                 handleDelete={() => handleDelete(index)}
