@@ -73,7 +73,7 @@ const BookForm = (props) => {
         <div>
           <label>Book Name</label>
           <input
-            id="bookname"
+            // id="bookname"
             className="input-control"
             type="text"
             name="bookname"
@@ -86,7 +86,7 @@ const BookForm = (props) => {
         <div>
           <label>Book Author</label>
           <input
-            id="author"
+            // id="author"
             className="input-control"
             type="text"
             name="author"
@@ -99,7 +99,7 @@ const BookForm = (props) => {
         <div>
           <label>Quantity</label>
           <input
-            id="quantity"
+            // id="quantity"
             className="input-control"
             type="number"
             name="quantity"
@@ -112,7 +112,7 @@ const BookForm = (props) => {
         <div>
           <label>Book Price</label>
           <input
-            id="price"
+            // id="price"
             className="input-control"
             type="text"
             name="price"
