@@ -37,7 +37,7 @@ class Todo extends Component {
     this.setState((prev) => {
       return prev.todoList.map((todo, index) => {
         return index !== i
-          ? todo[i]
+          ? todo
           : { completed: (todo.completed = !todo.completed) };
       });
     });
