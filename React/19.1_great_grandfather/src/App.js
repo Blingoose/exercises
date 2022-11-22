@@ -3,6 +3,7 @@ import "./App.css";
 
 const giftsContext = createContext();
 
+//-----------
 function App() {
   const [gifts, setGifts] = useState([]);
   return (
@@ -15,6 +16,7 @@ function App() {
 }
 export default App;
 
+//-----------
 function GrandFather() {
   return (
     <div>
@@ -23,9 +25,11 @@ function GrandFather() {
   );
 }
 
+//-----------
 function Father() {
   const { gifts, setGifts } = useContext(giftsContext);
   const arrOfGifts = ["Xbox", "Candies", "Cash", "Book"];
+
   useEffect(() => {
     setGifts(() => [...arrOfGifts]);
   }, []);
@@ -36,6 +40,7 @@ function Father() {
   );
 }
 
+//-----------
 function Son() {
   return (
     <div>
@@ -44,6 +49,7 @@ function Son() {
   );
 }
 
+//-----------
 function GrandSon() {
   const { gifts } = useContext(giftsContext);
   return (
