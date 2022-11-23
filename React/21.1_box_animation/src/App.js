@@ -4,10 +4,10 @@ import "./App.css";
 class App extends Component {
   constructor() {
     super();
-    this.abc = 0;
+    this.intervalID = 0;
     this.boxes = [
-      { width: 100, height: 100, color: "black", left: "-200px" },
-      { width: 200, height: 200, color: "green", left: "-300px" },
+      { width: 100, height: 100, color: "black", left: "-400px" },
+      { width: 200, height: 200, color: "green", left: "-400px" },
       { width: 400, height: 400, color: "blue", left: "-400px" },
     ];
 
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.abc = setInterval(() => {
+    this.intervalID = setInterval(() => {
       this.setState((prev) => {
         return { count: prev.count + 1 };
       });
@@ -29,7 +29,7 @@ class App extends Component {
   componentDidUpdate(_, prevState) {
     if (this.state.count === 5 && prevState.count !== this.state.count) {
       console.log("Hey!!!");
-      clearInterval(this.abc);
+      clearInterval(this.intervalID);
       this.setState((prev) => {
         return { time: (prev.time = false) };
       });
