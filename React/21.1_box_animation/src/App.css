@@ -2,15 +2,15 @@
   text-align: center;
 }
 .box1 {
-  animation: slide1 1s ease-in-out forwards;
+  animation: slide1 3s ease-in-out forwards;
   background-color: #00000000;
 }
 
 @keyframes slide1 {
   0% {
-    transform: translateX(-1000px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(500px);
+    transform: translateX(400px);
   }
 }

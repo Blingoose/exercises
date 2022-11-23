@@ -18,16 +18,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.intervalID = setInterval(() => {
+    setTimeout(() => {
       this.setState((prev) => {
-        return { count: prev.count + 1 };
+        return { count: (prev.count = 1) };
       });
-      console.log(this.state.count);
     }, this.state.time);
   }
 
   componentDidUpdate(_, prevState) {
-    if (this.state.count === 5 && prevState.count !== this.state.count) {
+    if (this.state.count > 4 && prevState.count !== this.state.count) {
       console.log("Hey!!!");
       clearInterval(this.intervalID);
       this.setState((prev) => {
@@ -37,6 +36,15 @@ class App extends Component {
   }
 
   render() {
+    const handleBox = () => {
+      clearInterval(this.intervalID);
+      this.intervalID = setInterval(() => {
+        this.setState((prev) => {
+          return { count: prev.count + 1 };
+        });
+        console.log(this.state.count);
+      }, 1000);
+    };
     return (
       <div>
         {this.boxes.map((_, i) => (
@@ -50,6 +58,7 @@ class App extends Component {
               left: this.boxes[i].left,
             }}
             className={this.state.count && this.state.time ? `box1` : ""}
+            onAnimationEnd={handleBox}
           ></div>
         ))}
       </div>
