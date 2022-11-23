@@ -4,12 +4,15 @@ import Filter from "./Filter";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    data: [],
-    error: false,
-    isLoading: false,
-    searchInput: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+      error: false,
+      isLoading: false,
+      searchInput: "",
+    };
+  }
 
   componentDidMount() {
     const fetchData = async () => {
