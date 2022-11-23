@@ -5,7 +5,6 @@ const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsloading] = useState(false);
   const [error, setError] = useState(null);
-  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     setIsloading(true);
@@ -22,9 +21,7 @@ const useFetch = (url) => {
       });
   }, [url]);
 
-  useEffect(() => {
-    setCategories(data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return { data, isLoading, error };
 };
