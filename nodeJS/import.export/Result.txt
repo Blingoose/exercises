@@ -1,0 +1,1 @@
+The average of 40,20,30 is 30

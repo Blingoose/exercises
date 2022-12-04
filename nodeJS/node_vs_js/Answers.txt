@@ -1,0 +1,19 @@
+Write in your own words the following:
+Question 1: What are 3 things node.js has that the client side javascript doesn’t have?
+Answer: 
+1. "global" object - global objects are global in nature and they are available in all modules. 
+   We do not need to include these objects in our application, rather we can use them directly. 
+   These objects are modules, functions, strings and object itself.
+2. Node.js has full access to the system like any other source application. 
+   This means it can read and write directly to or from the file system, 
+   it can also have unlimited network access, and it can execute software.
+3. Node.js has a dedicated server to run server-side requests, whereas JavaScript does not. 
+   if we use Node.js, both the server and the client can initiate requests. 
+
+
+What are 3 things the client side javascript has that node.js doesn’t have?
+Answer:
+1. The ability to be used in both frontend and backend, whereas Node.js can be used only for the backend.
+2. JavaScript can manipulate DOM or add HTML within whereas Node.js doesn’t have the capability to add HTML.
+3. JavaScript requires any running environment as it can execute on any engine such as Firefox’s spider monkey, 
+   v8 engine of google chrome, JavaScript core of Safari whereas Node.js runs only on the v8 engine of google chrome.
