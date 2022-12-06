@@ -15,7 +15,7 @@ const jsToJson = (users) => {
   fs.writeFileSync("users.json", dataJSON);
 };
 
-export const addUser = (name, email) => {
+const addUser = (name, email) => {
   const users = jsonToJs();
   const duplicatedUser = users.find((user) => {
     return user.name === name && user.email === email;
@@ -32,7 +32,7 @@ export const addUser = (name, email) => {
   }
 };
 
-export const readUser = (id) => {
+const readUser = (id) => {
   const users = jsonToJs();
   const user = users.find((user) => user.id === id);
   if (user) {
@@ -44,7 +44,7 @@ export const readUser = (id) => {
   }
 };
 
-export const updateUser = (id, updatedName, updatedEmail) => {
+const updateUser = (id, updatedName, updatedEmail) => {
   const users = jsonToJs();
   const user = users.find((user) => {
     return user.id === id;
@@ -66,7 +66,7 @@ export const updateUser = (id, updatedName, updatedEmail) => {
   }
 };
 
-export const removeUser = (id) => {
+const removeUser = (id) => {
   const users = jsonToJs();
   const nonDeletedUsers = users.filter((user) => {
     return user.id !== id;
@@ -77,3 +77,5 @@ export const removeUser = (id) => {
     jsToJson(nonDeletedUsers);
   }
 };
+
+export { removeUser, addUser, readUser, updateUser };

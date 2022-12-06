@@ -1,6 +1,6 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { addUser, updateUser, readUser, removeUser } from "./utilities.js";
+import * as myFunc from "./utilities.js";
 
 const yarg = yargs();
 
@@ -8,11 +8,6 @@ yarg.command({
   command: "add",
   describe: "Create user",
   builder: {
-    id: {
-      describe: "UserID",
-      demandOption: false,
-      type: "string",
-    },
     name: {
       describe: "User name",
       demandOption: true,
@@ -25,7 +20,7 @@ yarg.command({
     },
   },
   handler(argv) {
-    addUser(argv.name, argv.email);
+    myFunc.addUser(argv.name, argv.email);
   },
 });
 
@@ -40,7 +35,7 @@ yarg.command({
     },
   },
   handler(argv) {
-    readUser(argv.id);
+    myFunc.readUser(argv.id);
   },
 });
 
@@ -55,7 +50,7 @@ yarg.command({
     },
   },
   handler(argv) {
-    removeUser(argv.id);
+    myFunc.removeUser(argv.id);
   },
 });
 
@@ -75,7 +70,7 @@ yarg.command({
     },
   },
   handler(argv) {
-    updateUser(argv.id, argv.name, argv.email);
+    myFunc.updateUser(argv.id, argv.name, argv.email);
   },
 });
 
