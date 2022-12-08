@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Bomba",
+    "image": "http://api.androidhive.info/json/movies/2.jpg",
+    "rating": 6.7,
+    "releaseYear": 2022,
+    "genre": ["Action"],
+    "id": "c3eda92d-896a-4bd9-9be0-f7b9da7b4d7a"
+  },
+  {
+    "title": "300 Spartans",
+    "image": "http://api.androidhive.info/json/movies/2.jpg",
+    "rating": 6.7,
+    "releaseYear": 2010,
+    "genre": ["Action"],
+    "id": "c2085269-e909-4e5c-9b12-2830bc323492"
+  },
+  {
+    "title": "Harry Poter - The End",
+    "image": "http://api.androidhive.info/json/movies/2.jpg",
+    "rating": 6.7,
+    "releaseYear": 2022,
+    "genre": ["Fantasy", "Drama", "Adventure"],
+    "id": "d3295c95-482d-4147-98bd-67b8c6527309"
+  },
+  {
+    "title": "Rocky-2",
+    "image": "http://api.androidhive.info/json/movies/1.jpg",
+    "rating": 7.8,
+    "releaseYear": 2006,
+    "genre": ["Action", "Drama"],
+    "id": "d454723d-aa77-41f1-a279-4e5ac336814c"
+  },
+  {
+    "title": "Rocky-3",
+    "image": "http://api.androidhive.info/json/movies/1.jpg",
+    "rating": 8.1,
+    "releaseYear": 2008,
+    "genre": ["Action", "Drama", "Sci-Fi"],
+    "id": "6c5721c2-f76f-494f-a345-4810b5fa62e6"
+  },
+  {
+    "title": "District 9",
+    "image": "http://api.androidhive.info/json/movies/2.jpg",
+    "rating": 8,
+    "releaseYear": 2009,
+    "genre": ["Action", "Sci-Fi", "Thriller"],
+    "id": "2e8463db-a581-446f-ac13-9228561994c6"
+  },
+  {
+    "title": "What The Hell",
+    "image": "http://api.androidhive.info/json/movies/5.jpg",
+    "rating": 8.8,
+    "releaseYear": 2017,
+    "genre": ["Documentary"],
+    "id": "2d1440b8-4523-4415-a3db-80a67ab39544"
+  },
+  {
+    "title": "Armageddon",
+    "image": "http://api.androidhive.info/json/movies/9.jpg",
+    "rating": 9.1,
+    "releaseYear": 1999,
+    "genre": ["Action", "Drama"],
+    "id": "5a959d4a-f600-448e-be7d-f40d00a4ce7b"
+  }
+]

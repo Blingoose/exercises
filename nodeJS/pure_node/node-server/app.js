@@ -1,6 +1,11 @@
 import http from "http";
-import { URL } from "node:url";
 import fs from "fs";
+import { fileURLToPath } from "url";
+import path from "path";
+
+// const __filename = fileURLToPath(import.meta.url);
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const publicDirPath = path.join(__dirname, "../public");
 
 const PORT = 8000;
 const host = "localhost";
@@ -11,14 +16,14 @@ function handler(req, res) {
   switch (parsedUrl.pathname) {
     case "/":
       res.writeHead(200, { "Content-type": "text/html; charset=UTF-8" });
-      const homeHTML = fs.readFileSync("index.html");
+      const homeHTML = fs.readFileSync(publicDirPath + "/index.html");
       res.write(homeHTML);
       res.end();
       break;
 
     case "/index.css":
       res.writeHead(200, { "Content-type": "text/css" });
-      const indexCSS = fs.readFileSync("index.css");
+      const indexCSS = fs.readFileSync(publicDirPath + "/index.css");
       res.write(indexCSS);
       res.end();
       break;
@@ -38,7 +43,7 @@ function handler(req, res) {
 
     default:
       res.writeHead(404, { "Content-type": "text/html; charset=UTF-8" });
-      const error = fs.readFileSync("404.html");
+      const error = fs.readFileSync(publicDirPath + "/404.html");
       res.write(error);
       res.end();
   }
