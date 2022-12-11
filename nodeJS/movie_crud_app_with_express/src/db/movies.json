@@ -1,13 +1,5 @@
 [
   {
-    "title": "Bomba",
-    "image": "http://api.androidhive.info/json/movies/2.jpg",
-    "rating": 6.7,
-    "releaseYear": 2022,
-    "genre": ["Action"],
-    "id": "c3eda92d-896a-4bd9-9be0-f7b9da7b4d7a"
-  },
-  {
     "title": "300 Spartans",
     "image": "http://api.androidhive.info/json/movies/2.jpg",
     "rating": 6.7,
@@ -62,5 +54,13 @@
     "releaseYear": 1999,
     "genre": ["Action", "Drama"],
     "id": "5a959d4a-f600-448e-be7d-f40d00a4ce7b"
+  },
+  {
+    "title": "Bomba",
+    "image": "http://api.androidhive.info/json/movies/2.jpg",
+    "rating": 6.7,
+    "releaseYear": 2022,
+    "genre": ["Action"],
+    "id": "c3dd7b4e-ce2c-48d0-9082-e570f0e9dea2"
   }
 ]
